@@ -416,3 +416,22 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# VSTO-specific
+*.manifest
+*.vsto
+
+# Build output
+bin/
+obj/
+Debug/
+Release/
+
+# User-specific settings
+.vs/
+*.user
+*.suo
+
+# OS-specific
+.DS_Store
+Thumbs.db
