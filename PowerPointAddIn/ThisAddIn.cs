@@ -29,7 +29,17 @@ namespace PowerPointAddIn
             this.Startup += new System.EventHandler(ThisAddIn_Startup);
             this.Shutdown += new System.EventHandler(ThisAddIn_Shutdown);
         }
-        
+
+        #endregion
+
+        #region Odd-In custom code
+
+        //
+        protected override Microsoft.Office.Core.IRibbonExtensibility CreateRibbonExtensibilityObject()
+        {
+            return new Ribbon();
+        }
+
         #endregion
     }
 }

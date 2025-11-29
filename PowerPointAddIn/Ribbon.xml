@@ -1,13 +1,37 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
-  <ribbon>
-    <tabs>
-      <tab idMso="TabAddIns">
-        <group id="MyGroup"
-               label="My Group">
-        </group>
-      </tab>
-    </tabs>
-  </ribbon>
+	<ribbon>
+		<tabs>
+			<tab id="customTab" label="Odd-Ins">
+				<group id="groupCornerRadius" label="Corner Radius">
+					<box id="boxCornerRadiusMinMax">
+						<button id="btnMinCornerRadius"
+								size="large"
+								label="Minimum Radius"
+								imageMso="ShapeRectangle"
+								onAction="BtnMinCornerRadius_Click"/>
+						<button id="btnMaxCornerRadius"
+								size="large"
+								label="Maximum Radius"
+								imageMso="ShapeOval"
+								onAction="BtnMaxCornerRadius_Click"/>
+					</box>
+					<separator id="sepCornerRadius"/>
+					<box id="boxCornerRadiusEditBox">
+						<editBox id="editCornerRadius"
+								 getText="GetEditBox" 
+								 onChange="EditCornerRadius_Changed"
+								 sizeString="100%"/>
+						<button id="btnDecreaseCornerRadius"
+							   imageMso="OutlineCollapse"
+							   onAction="BtnDecreaseCornerRadius_Click"/>
+						<button id="btnIncreaseCornerRadius"
+								imageMso="OutlineExpand"
+								onAction="BtnIncreaseCornerRadius_Click"/>
+					</box>
+				</group>
+			</tab>
+		</tabs>
+	</ribbon>
 </customUI>
 
