@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:type="TaskPaneApp">
+
+  <Id>{GUID}</Id>
+  <Version>{VERSION}</Version>
+  <ProviderName>{COMPANY_NAME}</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+ Name DefaultValue="{ADDIN_NAME}"/>
+  <Description DefaultValue="{ADDIN_DESCRIPTION}"/>
+  <IconUrl DefaultValue="{ICON_URL}"/>
+  <SupportUrl DefaultValue="{SUPPORT_URL}"/>
+
+  <Hosts>
+    <Host Name="Document"/>
+  </Hosts>
+
+  <Requirements>
+    <Sets DefaultMinVersion="1.1">
+      <Set Name="Document"/>
+    </Sets>
+  </Requirements>
+
+  <DefaultSettings>
+    <SourceLocation DefaultValue="{TASKPANE_URL}"/>
+  </DefaultSettings>
+
+  <Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>
